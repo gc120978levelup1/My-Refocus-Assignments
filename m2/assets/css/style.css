@@ -79,10 +79,6 @@ summary h2, .certifications h2, .social-media-links h2{
     padding: 0;
 }
 
-.name-contact-container, main, .footer{
-    position: relative;
-}
-
 footer{
     padding-top: 20px;
     padding-bottom: 40px;
@@ -210,7 +206,7 @@ summary p{
 @media only screen and (min-width: 768px) {
     .main-container{
         display: grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 30% 1fr;
         grid-template-rows: auto 1fr;
     }
 
@@ -231,9 +227,27 @@ summary p{
     }
 }
 
+.technologies-list-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    gap: 8px;
+    margin-bottom: 40px;
+    justify-items: centers;
+}
+
+.tech-ribbon{
+    border-bottom: 4px solid rgba(6, 6, 178, 0.356);
+    border-radius: 6px 4px;
+    padding: 4px 15px 2px 15px;
+    background-color: rgba(0, 0, 255, 0.621);
+    color: beige;
+}
+
 @keyframes appear-slowly {
     0%{
-        transform: scale(0.8 , 0.8) translateX(100vw);
+        transform: scale(0.5 , 0.5) translateX(100vw);
     }
     50%{
         transform: scale(0.8 , 0.8) translateX(0px);

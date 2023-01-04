@@ -6,14 +6,21 @@ document.onreadystatechange = () => {
         const els = document.querySelectorAll("*");
         for (const el of els){
             //console.log(el.tagName);
-            if (   !(el.tagName === 'HTML'  )
-                && !(el.tagName === 'HEAD'  )
-                && !(el.tagName === 'META'  )
-                && !(el.tagName === 'TITLE' )
-                && !(el.tagName === 'LINK'  )
-                && !(el.tagName === 'SCRIPT')
-                && !(el.tagName === 'BODY'  )
-                && !(el.tagName === 'SECTION'  )
+            //console.log(el.classList)
+            if (   !(el.tagName === 'HTML'   )
+                && !(el.tagName === 'HEAD'   )
+                && !(el.tagName === 'META'   )
+                && !(el.tagName === 'TITLE'  )
+                && !(el.tagName === 'LINK'   )
+                && !(el.tagName === 'SCRIPT' )
+                && !(el.tagName === 'BODY'   )
+                && !(el.tagName === 'SECTION')
+                && !(el.tagName === 'HEADER' )
+                && !(el.tagName === 'MAIN'   )
+                && !(el.tagName === 'FOOTER' )
+                && !((el.tagName === 'DIV'   ) && (el.classList.contains('header')))
+                && !((el.tagName === 'DIV'   ) && (el.classList.contains('main'  )))
+                && !((el.tagName === 'DIV'   ) && (el.classList.contains('footer')))
             ){
                 el.classList.add('hide-all');
                 const observer = new IntersectionObserver((entries, observer) => {

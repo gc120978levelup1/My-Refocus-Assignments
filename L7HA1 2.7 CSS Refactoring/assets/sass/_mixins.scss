@@ -1,0 +1,16 @@
+@use 'variables';
+
+@mixin margin_padding(){
+    margin: 0;
+    padding: 0;
+}
+
+@mixin border_left_right(){
+    border-left: variables.$triangle-dim-1 solid transparent;
+    border-right: variables.$triangle-dim-1 solid transparent;
+}
+
+@mixin border_top_bottom(){
+    border-top: variables.$triangle-dim-1 solid transparent;
+    border-bottom: variables.$triangle-dim-1 solid transparent;
+}

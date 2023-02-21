@@ -40,25 +40,21 @@
       }
       
       .ellipse-horizontal {
-        width : variables.$ellipse-dim-1;
-        height: variables.$ellipse-dim-2;
+        @include mixins.width_height($width-1:variables.$ellipse-dim-1, $height-1:variables.$ellipse-dim-2);
         border-radius: variables.$ellipse-radius-1;
       }
       
       .ellipse-vertical {
-        width: variables.$ellipse-dim-2;
-        height: variables.$ellipse-dim-1;
+        @include mixins.width_height($width-1:variables.$ellipse-dim-2, $height-1:variables.$ellipse-dim-1);
         border-radius: variables.$ellipse-radius-1;
       }
       
       .rectangle-horizontal {
-        width: variables.$rectangle-dim-1;
-        height: variables.$rectangle-dim-2;
+        @include mixins.width_height($width-1:variables.$rectangle-dim-1, $height-1:variables.$rectangle-dim-2);
       }
       
       .rectangle-vertical {
-        width: variables.$rectangle-dim-2;
-        height: variables.$rectangle-dim-1;
+        @include mixins.width_height($width-1:variables.$rectangle-dim-2, $height-1:variables.$rectangle-dim-1);
       }
       
       .orange {
